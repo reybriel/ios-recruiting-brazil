@@ -1,5 +1,6 @@
 import class RxSwift.Observable
-import UIKit
+import class UIKit.UITabBarItem
+import class UIKit.UIViewController
 
 final class AllMoviesCoordinator: Coordinator {
     func start() -> Observable<UIViewController> {
