@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		16103F8B24104C0F00BA1330 /* UITabBarControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16103F8A24104C0F00BA1330 /* UITabBarControllerTestCase.swift */; };
+		16103F902410528B00BA1330 /* AppDelegateTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16103F8F2410528B00BA1330 /* AppDelegateTestCase.swift */; };
 		16119895240FE5D500C82B21 /* InitialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16119894240FE5D500C82B21 /* InitialCoordinator.swift */; };
 		164A3302240FE8AD00EF88C5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A3301240FE8AD00EF88C5 /* Coordinator.swift */; };
 		164A3305240FEBC800EF88C5 /* AllMoviesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A3304240FEBC800EF88C5 /* AllMoviesCoordinator.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		16103F8A24104C0F00BA1330 /* UITabBarControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarControllerTestCase.swift; sourceTree = "<group>"; };
+		16103F8F2410528B00BA1330 /* AppDelegateTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTestCase.swift; sourceTree = "<group>"; };
 		16119894240FE5D500C82B21 /* InitialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialCoordinator.swift; sourceTree = "<group>"; };
 		164A3301240FE8AD00EF88C5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		164A3304240FEBC800EF88C5 /* AllMoviesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMoviesCoordinator.swift; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 				16103F8A24104C0F00BA1330 /* UITabBarControllerTestCase.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		16103F8E2410527200BA1330 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				16103F8F2410528B00BA1330 /* AppDelegateTestCase.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		16119890240FDD6700C82B21 /* App */ = {
@@ -296,6 +306,7 @@
 			children = (
 				164A33382410314800EF88C5 /* Utils */,
 				164A334924103DDB00EF88C5 /* Common */,
+				16103F8E2410527200BA1330 /* App */,
 				164A332E241016A000EF88C5 /* Scenes */,
 				169F2B3B240E948A00AD1315 /* Info.plist */,
 			);
@@ -482,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16103F8B24104C0F00BA1330 /* UITabBarControllerTestCase.swift in Sources */,
+				16103F902410528B00BA1330 /* AppDelegateTestCase.swift in Sources */,
 				164A3331241016CE00EF88C5 /* InitialCoordinatorTestCase.swift in Sources */,
 				164A33342410307E00EF88C5 /* AllMoviesCoordinatorTestCase.swift in Sources */,
 				164A333A2410315B00EF88C5 /* XCTestCase+Assertions.swift in Sources */,
