@@ -2,7 +2,7 @@ import class RxSwift.Observable
 import class UIKit.UITabBarItem
 import class UIKit.UIViewController
 
-final class FavoritesMoviesCoordinator: Coordinator {
+final class FavoriteMoviesCoordinator: Coordinator {
     func start() -> Observable<UIViewController> {
         let viewController = UIViewController()
         viewController.view.backgroundColor = .yellow

@@ -4,7 +4,7 @@ import class UIKit.UIViewController
 
 final class InitialCoordinator: Coordinator {
     func start() -> Observable<UIViewController> {
-        Observable.zip(AllMoviesCoordinator().start(), FavoritesMoviesCoordinator().start())
+        Observable.zip(AllMoviesCoordinator().start(), FavoriteMoviesCoordinator().start())
             .take(1)
             .map { allMoviesVC, favoriteMoviesVC in
                 UITabBarController()
