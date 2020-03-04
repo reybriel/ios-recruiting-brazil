@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16103F8B24104C0F00BA1330 /* UITabBarControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16103F8A24104C0F00BA1330 /* UITabBarControllerTestCase.swift */; };
 		16119895240FE5D500C82B21 /* InitialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16119894240FE5D500C82B21 /* InitialCoordinator.swift */; };
 		164A3302240FE8AD00EF88C5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A3301240FE8AD00EF88C5 /* Coordinator.swift */; };
 		164A3305240FEBC800EF88C5 /* AllMoviesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A3304240FEBC800EF88C5 /* AllMoviesCoordinator.swift */; };
@@ -17,7 +18,6 @@
 		164A3320240FFE4B00EF88C5 /* UITabBarController+MovieTabBarCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A331F240FFE4B00EF88C5 /* UITabBarController+MovieTabBarCreator.swift */; };
 		164A33282410027900EF88C5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A33272410027900EF88C5 /* Colors.swift */; };
 		164A332A2410029F00EF88C5 /* Colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 164A33292410029F00EF88C5 /* Colors.json */; };
-		164A332D2410078D00EF88C5 /* UITabBarItem+MovieTabItemCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A332C2410078D00EF88C5 /* UITabBarItem+MovieTabItemCreator.swift */; };
 		164A3331241016CE00EF88C5 /* InitialCoordinatorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A3330241016CE00EF88C5 /* InitialCoordinatorTestCase.swift */; };
 		164A33342410307E00EF88C5 /* AllMoviesCoordinatorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A33332410307E00EF88C5 /* AllMoviesCoordinatorTestCase.swift */; };
 		164A3337241030E600EF88C5 /* FavoriteMoviesTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A3336241030E600EF88C5 /* FavoriteMoviesTestCase.swift */; };
@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16103F8A24104C0F00BA1330 /* UITabBarControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarControllerTestCase.swift; sourceTree = "<group>"; };
 		16119894240FE5D500C82B21 /* InitialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialCoordinator.swift; sourceTree = "<group>"; };
 		164A3301240FE8AD00EF88C5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		164A3304240FEBC800EF88C5 /* AllMoviesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMoviesCoordinator.swift; sourceTree = "<group>"; };
@@ -53,7 +54,6 @@
 		164A331F240FFE4B00EF88C5 /* UITabBarController+MovieTabBarCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+MovieTabBarCreator.swift"; sourceTree = "<group>"; };
 		164A33272410027900EF88C5 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		164A33292410029F00EF88C5 /* Colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Colors.json; sourceTree = "<group>"; };
-		164A332C2410078D00EF88C5 /* UITabBarItem+MovieTabItemCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+MovieTabItemCreator.swift"; sourceTree = "<group>"; };
 		164A3330241016CE00EF88C5 /* InitialCoordinatorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialCoordinatorTestCase.swift; sourceTree = "<group>"; };
 		164A33332410307E00EF88C5 /* AllMoviesCoordinatorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMoviesCoordinatorTestCase.swift; sourceTree = "<group>"; };
 		164A3336241030E600EF88C5 /* FavoriteMoviesTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMoviesTestCase.swift; sourceTree = "<group>"; };
@@ -95,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16103F8924104BEC00BA1330 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				16103F8A24104C0F00BA1330 /* UITabBarControllerTestCase.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		16119890240FDD6700C82B21 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				164A331F240FFE4B00EF88C5 /* UITabBarController+MovieTabBarCreator.swift */,
-				164A332C2410078D00EF88C5 /* UITabBarItem+MovieTabItemCreator.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -240,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				164A334A24103DE100EF88C5 /* Utils */,
+				16103F8924104BEC00BA1330 /* CustomView */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -457,7 +465,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				164A3302240FE8AD00EF88C5 /* Coordinator.swift in Sources */,
-				164A332D2410078D00EF88C5 /* UITabBarItem+MovieTabItemCreator.swift in Sources */,
 				164A33282410027900EF88C5 /* Colors.swift in Sources */,
 				164A331D240FFBF400EF88C5 /* Assets.swift in Sources */,
 				169F2B23240E948900AD1315 /* AppDelegate.swift in Sources */,
@@ -474,6 +481,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16103F8B24104C0F00BA1330 /* UITabBarControllerTestCase.swift in Sources */,
 				164A3331241016CE00EF88C5 /* InitialCoordinatorTestCase.swift in Sources */,
 				164A33342410307E00EF88C5 /* AllMoviesCoordinatorTestCase.swift in Sources */,
 				164A333A2410315B00EF88C5 /* XCTestCase+Assertions.swift in Sources */,
