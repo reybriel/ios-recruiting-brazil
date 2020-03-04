@@ -1,4 +1,3 @@
-import class RxSwift.DisposeBag
 import UIKit
 
 @UIApplicationMain
