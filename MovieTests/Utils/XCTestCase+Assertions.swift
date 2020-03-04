@@ -1,18 +1,36 @@
+@testable
+import Movie
 import class RxSwift.Observable
 import XCTest
 
 protocol Assertions {
-    func AssertSequenceEmitsOnce(_ sequence: Observable<Any>)
+    func MVAssertSequenceEmitsOnlyOnce(_ sequence: Observable<Any>)
+    func MVAssertViewController<T>(createBy coordinator: Coordinator, isKindOf: T.Type)
 }
 
 extension XCTestCase: Assertions {
-    func AssertSequenceEmitsOnce<Element>(_ sequence: Observable<Element>) {
-        let sequenceIsCompleted = expectation(description: "viewControllerSequenceIsCompleted")
+    func MVAssertSequenceEmitsOnlyOnce<Element>(_ sequence: Observable<Element>) {
+        var lastIndex: Int = .max
 
         let viewControllerSequence = sequence
-            .subscribe(onCompleted: sequenceIsCompleted.fulfill)
+            .enumerated()
+            .subscribe(onNext: { index, _ in
+                lastIndex = index
+            }, onCompleted: {
+                XCTAssertFalse(lastIndex > 0)
+            })
 
-        wait(for: [sequenceIsCompleted], timeout: 0)
         viewControllerSequence.dispose()
+    }
+
+    func MVAssertViewController<T>(createBy coordinator: Coordinator, isKindOf _: T.Type) {
+        var isKinfOdGivenType = false
+        let viewControllerSequence = coordinator.start()
+            .subscribe(onNext: { viewController in
+                isKinfOdGivenType = viewController is T
+            })
+
+        viewControllerSequence.dispose()
+        XCTAssertTrue(isKinfOdGivenType)
     }
 }

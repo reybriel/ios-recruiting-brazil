@@ -3,7 +3,9 @@ import Movie
 import RxSwift
 import XCTest
 
-final class InitialCoordinatorTestCase: MovieTestCase<InitialCoordinator> {
+final class InitialCoordinatorTestCase: XCTestCase {
+    private var sut: InitialCoordinator!
+
     override func setUp() {
         sut = InitialCoordinator()
     }
@@ -12,7 +14,11 @@ final class InitialCoordinatorTestCase: MovieTestCase<InitialCoordinator> {
         sut = nil
     }
 
-    func test_firstViewController_hasToBeTabBarController() {
-        XCTAssertTrue(createdViewController(isKindOf: UITabBarController.self))
+    func test_start_hasToCreateATabBarController() {
+        MVAssertViewController(createBy: sut, isKindOf: UITabBarController.self)
+    }
+
+    func test_start_hasToEmitOnce() {
+        MVAssertSequenceEmitsOnlyOnce(sut.start())
     }
 }
