@@ -2,6 +2,12 @@ import SnapKit
 import UIKit
 
 final class AllMoviesView: UIView {
+    private let searchBarContainerView: SearchBarContainerView = {
+        let view = SearchBarContainerView()
+        view.accessibilityIdentifier = "searchBarContainer"
+        return view
+    }()
+
     private let moviesCollectionView: UICollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         view.accessibilityIdentifier = "moviesCollectionView"
@@ -22,11 +28,12 @@ final class AllMoviesView: UIView {
 
 extension AllMoviesView: ViewCode {
     func setupHierarchy() {
-        addSubview(moviesCollectionView)
+        addSubview(searchBarContainerView)
+        searchBarContainerView.setContainerView(moviesCollectionView)
     }
 
     func setupAutolayout() {
-        moviesCollectionView.snp.makeConstraints { make in
+        searchBarContainerView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }

@@ -21,6 +21,8 @@
 		163DBA332412311C0055C06F /* UINavigationController+MovieNavigationBarCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163DBA322412311C0055C06F /* UINavigationController+MovieNavigationBarCreator.swift */; };
 		163DBA36241239BB0055C06F /* ViewCodeSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163DBA35241239BB0055C06F /* ViewCodeSpy.swift */; };
 		163DBA3924123A620055C06F /* ViewCodeTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163DBA3824123A620055C06F /* ViewCodeTestCase.swift */; };
+		163DBA3B241253D60055C06F /* SearchBarContainerViewTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163DBA3A241253D60055C06F /* SearchBarContainerViewTestCase.swift */; };
+		163DBA3D241254070055C06F /* SearchBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163DBA3C241254070055C06F /* SearchBarContainerView.swift */; };
 		164A3302240FE8AD00EF88C5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A3301240FE8AD00EF88C5 /* Coordinator.swift */; };
 		164A3305240FEBC800EF88C5 /* AllMoviesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A3304240FEBC800EF88C5 /* AllMoviesCoordinator.swift */; };
 		164A3308240FEC0C00EF88C5 /* FavoriteMoviesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A3307240FEC0C00EF88C5 /* FavoriteMoviesCoordinator.swift */; };
@@ -71,6 +73,8 @@
 		163DBA322412311C0055C06F /* UINavigationController+MovieNavigationBarCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+MovieNavigationBarCreator.swift"; sourceTree = "<group>"; };
 		163DBA35241239BB0055C06F /* ViewCodeSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeSpy.swift; sourceTree = "<group>"; };
 		163DBA3824123A620055C06F /* ViewCodeTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeTestCase.swift; sourceTree = "<group>"; };
+		163DBA3A241253D60055C06F /* SearchBarContainerViewTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarContainerViewTestCase.swift; sourceTree = "<group>"; };
+		163DBA3C241254070055C06F /* SearchBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarContainerView.swift; sourceTree = "<group>"; };
 		164A3301240FE8AD00EF88C5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		164A3304240FEBC800EF88C5 /* AllMoviesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMoviesCoordinator.swift; sourceTree = "<group>"; };
 		164A3307240FEC0C00EF88C5 /* FavoriteMoviesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMoviesCoordinator.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 			children = (
 				16103F8A24104C0F00BA1330 /* UITabBarControllerTestCase.swift */,
 				163DBA2F241230640055C06F /* UINavigationControllerTestCase.swift */,
+				163DBA3A241253D60055C06F /* SearchBarContainerViewTestCase.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 			children = (
 				164A331F240FFE4B00EF88C5 /* UITabBarController+MovieTabBarCreator.swift */,
 				163DBA322412311C0055C06F /* UINavigationController+MovieNavigationBarCreator.swift */,
+				163DBA3C241254070055C06F /* SearchBarContainerView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -567,6 +573,7 @@
 				164A334824103CD100EF88C5 /* UIWindowFactory.swift in Sources */,
 				164A3308240FEC0C00EF88C5 /* FavoriteMoviesCoordinator.swift in Sources */,
 				164A331C240FFBF400EF88C5 /* Strings.swift in Sources */,
+				163DBA3D241254070055C06F /* SearchBarContainerView.swift in Sources */,
 				16103F97241060B400BA1330 /* AllMoviesViewController.swift in Sources */,
 				164A3320240FFE4B00EF88C5 /* UITabBarController+MovieTabBarCreator.swift in Sources */,
 				164A3305240FEBC800EF88C5 /* AllMoviesCoordinator.swift in Sources */,
@@ -582,6 +589,7 @@
 				16103F902410528B00BA1330 /* AppDelegateTestCase.swift in Sources */,
 				163DBA36241239BB0055C06F /* ViewCodeSpy.swift in Sources */,
 				164A3331241016CE00EF88C5 /* InitialCoordinatorTestCase.swift in Sources */,
+				163DBA3B241253D60055C06F /* SearchBarContainerViewTestCase.swift in Sources */,
 				16B61D6924121FF4006E88FF /* UIView+ViewHelper.swift in Sources */,
 				164A33342410307E00EF88C5 /* AllMoviesCoordinatorTestCase.swift in Sources */,
 				16B61D6E24122463006E88FF /* CoordinatorExtension.swift in Sources */,

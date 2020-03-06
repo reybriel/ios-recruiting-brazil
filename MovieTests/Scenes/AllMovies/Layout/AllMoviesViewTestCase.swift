@@ -5,8 +5,14 @@ import XCTest
 final class AllMoviesTestCase: XCTestCase {
     private var sut: AllMoviesView!
 
+    private var searchBarContainerView: SearchBarContainerView! {
+        sut.subview(withAccessibilityIdentifier: "searchBarContainer")
+    }
+
     private var collectionView: UICollectionView! {
-        sut.subview(withAccessibilityIdentifier: "moviesCollectionView")
+        searchBarContainerView
+            .subview(withAccessibilityIdentifier: "searchBarContainerView")!
+            .subview(withAccessibilityIdentifier: "moviesCollectionView")
     }
 
     override func setUp() {
@@ -15,6 +21,19 @@ final class AllMoviesTestCase: XCTestCase {
 
     override func tearDown() {
         sut = nil
+    }
+
+    func test_searchBarContainerView_hasToHaveASearchBarContainerAsSbuview() {
+        XCTAssertNotNil(searchBarContainerView)
+    }
+
+    func test_searchBarContainerView_hasToHaveTheSameSizeAndPositionAsAllMoviesView() {
+        sut.layoutIfNeeded()
+        XCTAssertEqual(searchBarContainerView.frame, sut.frame)
+    }
+
+    func test_searchBarContainerView_hasToContainTheMoviesCollectionView() {
+        XCTAssertNotNil(collectionView)
     }
 
     func test_sut_hasToHaveAWhiteBackground() {
@@ -27,10 +46,5 @@ final class AllMoviesTestCase: XCTestCase {
 
     func test_collectionView_hasToHaveAFlowLayout() {
         XCTAssertTrue(collectionView.collectionViewLayout is UICollectionViewFlowLayout)
-    }
-
-    func test_collectionView_hasToHaveTheSameSizeAndPositionAsAllMoviesView() {
-        sut.layoutIfNeeded()
-        XCTAssertEqual(collectionView.frame, sut.frame)
     }
 }

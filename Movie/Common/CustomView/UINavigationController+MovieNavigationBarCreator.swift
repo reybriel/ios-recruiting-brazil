@@ -1,3 +1,4 @@
+import class UIKit.UIImage
 import class UIKit.UINavigationController
 import class UIKit.UIViewController
 
@@ -12,6 +13,7 @@ extension UINavigationController: MovieNavigationBarCreator {
         navigationBar.barTintColor = ColorName.primary.color
         navigationBar.tintColor = ColorName.secondary.color
         navigationBar.titleTextAttributes = [.foregroundColor: ColorName.secondary.color]
+        navigationBar.shadowImage = UIImage()
         return self
     }
 

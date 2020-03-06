@@ -15,6 +15,10 @@ final class UINavigationControllerTestCase: XCTestCase {
 
     //  UINavigationController.createMovieNavigationBar
 
+    func test_createMovieNavigationBar_hasToReturnBorderlessNavigationBar() {
+        XCTAssertEqual(movieNavigationController.navigationBar.shadowImage, UIImage())
+    }
+
     func test_createMovieNavigationBar_hasToReturnANonTranslucentNavigationBar() {
         XCTAssertFalse(movieNavigationController.navigationBar.isTranslucent)
     }
