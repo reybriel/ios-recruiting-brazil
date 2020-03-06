@@ -6,6 +6,10 @@ import XCTest
 final class InitialCoordinatorTestCase: XCTestCase {
     private var sut: InitialCoordinator!
 
+    private var tabBarController: UITabBarController! {
+        sut.viewController as? UITabBarController
+    }
+
     override func setUp() {
         sut = InitialCoordinator()
     }
@@ -20,5 +24,25 @@ final class InitialCoordinatorTestCase: XCTestCase {
 
     func test_start_hasToEmitOnce() {
         MVAssertSequenceEmitsOnlyOnce(sut.start())
+    }
+
+    func test_tabBar_hasToHaveTwoTabs() {
+        XCTAssertEqual(tabBarController.viewControllers!.count, 2)
+    }
+
+    func test_tabs_hasToBeNavigationControllers() {
+        tabBarController.viewControllers!.forEach { viewController in
+            MVAssertInstance(viewController, isKindOf: UINavigationController.self)
+        }
+    }
+
+    func test_firstNavigationController_hasToContainAllMovies() {
+        let navigationController = tabBarController.viewControllers![0] as! UINavigationController
+        MVAssertInstance(navigationController.visibleViewController, isKindOf: AllMoviesViewController.self)
+    }
+
+    func test_secondNavigationController_hasToContainFavoriteMovies() {
+        let navigationController = tabBarController.viewControllers![1] as! UINavigationController
+        MVAssertInstance(navigationController.visibleViewController, isKindOf: UIViewController.self)
     }
 }

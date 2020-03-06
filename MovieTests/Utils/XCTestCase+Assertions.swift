@@ -6,6 +6,7 @@ import XCTest
 protocol Assertions {
     func MVAssertSequenceEmitsOnlyOnce(_ sequence: Observable<Any>)
     func MVAssertViewController<T>(createBy coordinator: Coordinator, isKindOf: T.Type)
+    func MVAssertInstance<T, U>(_ instance: T, isKindOf: U.Type)
 }
 
 extension XCTestCase: Assertions {
@@ -32,5 +33,9 @@ extension XCTestCase: Assertions {
 
         viewControllerSequence.dispose()
         XCTAssertTrue(isKinfOdGivenType)
+    }
+
+    func MVAssertInstance<T, U>(_ instance: T, isKindOf _: U.Type) {
+        XCTAssertTrue(instance is U)
     }
 }

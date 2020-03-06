@@ -1,15 +1,16 @@
 import class RxSwift.Observable
-import class UIKit.UITabBarController
-import class UIKit.UIViewController
+import UIKit
 
 final class InitialCoordinator: Coordinator {
     func start() -> Observable<UIViewController> {
         Observable.zip(AllMoviesCoordinator().start(), FavoriteMoviesCoordinator().start())
             .take(1)
             .map { allMoviesVC, favoriteMoviesVC in
-                UITabBarController()
+                let viewControllers = [UINavigationController(rootViewController: allMoviesVC),
+                                       UINavigationController(rootViewController: favoriteMoviesVC)]
+                return UITabBarController()
                     .createMovieTabBar()
-                    .with(viewControllers: [allMoviesVC, favoriteMoviesVC])
+                    .with(viewControllers: viewControllers)
             }
     }
 }
