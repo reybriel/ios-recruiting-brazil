@@ -11,6 +11,11 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name
 internal enum L10n {
+    internal enum AllMovies {
+        /// Movies
+        internal static let title = L10n.tr("Localizable", "allMovies.title")
+    }
+
     internal enum TabBar {
         /// Movies
         internal static let allMovies = L10n.tr("Localizable", "tabBar.allMovies")

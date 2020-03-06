@@ -25,6 +25,9 @@ internal struct ColorName {
     /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#2d2f47"></span>
     /// Alpha: 100% <br/> (0x2d2f47ff)
     internal static let secondary = ColorName(rgbaValue: 0x2D2F_47FF)
+    /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffffff"></span>
+    /// Alpha: 100% <br/> (0xffffffff)
+    internal static let stepWhite = ColorName(rgbaValue: 0xFFFF_FFFF)
 }
 
 // swiftlint:enable identifier_name line_length type_body_length

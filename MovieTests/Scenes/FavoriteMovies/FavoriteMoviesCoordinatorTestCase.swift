@@ -14,6 +14,12 @@ final class FavoriteMoviesCoordinatorTestCase: XCTestCase {
         sut = nil
     }
 
+    func test_viewController_hasToHaveAProperTabBarItem() {
+        let item = sut.viewController.tabBarItem!
+        XCTAssertEqual(item.title, L10n.TabBar.favoriteMovies)
+        XCTAssertEqual(item.image, Asset.favoriteEmptyIcon.image)
+    }
+
     func test_start_hasToEmitOnce() {
         MVAssertSequenceEmitsOnlyOnce(sut.start())
     }

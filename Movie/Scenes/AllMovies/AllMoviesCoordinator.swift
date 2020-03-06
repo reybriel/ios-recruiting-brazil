@@ -4,8 +4,7 @@ import class UIKit.UIViewController
 
 final class AllMoviesCoordinator: Coordinator {
     func start() -> Observable<UIViewController> {
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .red
+        let viewController = AllMoviesViewController()
         viewController.tabBarItem = UITabBarItem(title: L10n.TabBar.allMovies,
                                                  image: Asset.listIcon.image,
                                                  selectedImage: nil)

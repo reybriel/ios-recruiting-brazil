@@ -1,3 +1,5 @@
 // Tab Bar
 "tabBar.favoriteMovies" = "Favorites";
 "tabBar.allMovies" = "Movies";
+// All Movies
+"allMovies.title" = "Movies";
