@@ -48,6 +48,9 @@ final class InitialCoordinatorTestCase: XCTestCase {
             XCTAssertFalse(navigationController.navigationBar.isTranslucent)
             XCTAssertEqual(navigationController.navigationBar.barTintColor, ColorName.primary.color)
             XCTAssertEqual(navigationController.navigationBar.tintColor, ColorName.secondary.color)
+            let titleTextForegroundColor = navigationController.navigationBar
+                .titleTextAttributes![.foregroundColor] as! UIColor
+            XCTAssertEqual(titleTextForegroundColor, ColorName.secondary.color)
         }
     }
 

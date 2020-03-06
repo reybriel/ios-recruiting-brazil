@@ -1,6 +1,5 @@
 @testable
 import Movie
-import RxSwift
 import XCTest
 
 final class AllMoviesCoordinatorTestCase: XCTestCase {

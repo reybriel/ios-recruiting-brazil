@@ -17,6 +17,8 @@
 		16103FD724121A1B00BA1330 /* AllMoviesViewTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16103FD624121A1B00BA1330 /* AllMoviesViewTestCase.swift */; };
 		16119895240FE5D500C82B21 /* InitialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16119894240FE5D500C82B21 /* InitialCoordinator.swift */; };
 		163DBA2D241227E50055C06F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163DBA2C241227E50055C06F /* Constants.swift */; };
+		163DBA30241230640055C06F /* UINavigationControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163DBA2F241230640055C06F /* UINavigationControllerTestCase.swift */; };
+		163DBA332412311C0055C06F /* UINavigationController+MovieNavigationBarCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163DBA322412311C0055C06F /* UINavigationController+MovieNavigationBarCreator.swift */; };
 		164A3302240FE8AD00EF88C5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A3301240FE8AD00EF88C5 /* Coordinator.swift */; };
 		164A3305240FEBC800EF88C5 /* AllMoviesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A3304240FEBC800EF88C5 /* AllMoviesCoordinator.swift */; };
 		164A3308240FEC0C00EF88C5 /* FavoriteMoviesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A3307240FEC0C00EF88C5 /* FavoriteMoviesCoordinator.swift */; };
@@ -63,6 +65,8 @@
 		16103FD624121A1B00BA1330 /* AllMoviesViewTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMoviesViewTestCase.swift; sourceTree = "<group>"; };
 		16119894240FE5D500C82B21 /* InitialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialCoordinator.swift; sourceTree = "<group>"; };
 		163DBA2C241227E50055C06F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		163DBA2F241230640055C06F /* UINavigationControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerTestCase.swift; sourceTree = "<group>"; };
+		163DBA322412311C0055C06F /* UINavigationController+MovieNavigationBarCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+MovieNavigationBarCreator.swift"; sourceTree = "<group>"; };
 		164A3301240FE8AD00EF88C5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		164A3304240FEBC800EF88C5 /* AllMoviesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMoviesCoordinator.swift; sourceTree = "<group>"; };
 		164A3307240FEC0C00EF88C5 /* FavoriteMoviesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMoviesCoordinator.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				16103F8A24104C0F00BA1330 /* UITabBarControllerTestCase.swift */,
+				163DBA2F241230640055C06F /* UINavigationControllerTestCase.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				164A331F240FFE4B00EF88C5 /* UITabBarController+MovieTabBarCreator.swift */,
+				163DBA322412311C0055C06F /* UINavigationController+MovieNavigationBarCreator.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -534,6 +540,7 @@
 				164A331D240FFBF400EF88C5 /* Assets.swift in Sources */,
 				169F2B23240E948900AD1315 /* AppDelegate.swift in Sources */,
 				16119895240FE5D500C82B21 /* InitialCoordinator.swift in Sources */,
+				163DBA332412311C0055C06F /* UINavigationController+MovieNavigationBarCreator.swift in Sources */,
 				16103F9B2410628200BA1330 /* AllMoviesView.swift in Sources */,
 				164A334824103CD100EF88C5 /* UIWindowFactory.swift in Sources */,
 				164A3308240FEC0C00EF88C5 /* FavoriteMoviesCoordinator.swift in Sources */,
@@ -560,6 +567,7 @@
 				164A3337241030E600EF88C5 /* FavoriteMoviesCoordinatorTestCase.swift in Sources */,
 				16103FD724121A1B00BA1330 /* AllMoviesViewTestCase.swift in Sources */,
 				16103F992410613E00BA1330 /* AllMoviesViewControllerTestCase.swift in Sources */,
+				163DBA30241230640055C06F /* UINavigationControllerTestCase.swift in Sources */,
 				163DBA2D241227E50055C06F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

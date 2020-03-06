@@ -15,10 +15,8 @@ final class InitialCoordinator: Coordinator {
     }
 
     private func navigationController(rootViewController: UIViewController) -> UINavigationController {
-        let navigationController = UINavigationController(rootViewController: rootViewController)
-        navigationController.navigationBar.isTranslucent = false
-        navigationController.navigationBar.barTintColor = ColorName.primary.color
-        navigationController.navigationBar.tintColor = ColorName.secondary.color
-        return navigationController
+        UINavigationController()
+            .createMovieNavigationBar()
+            .with(rootViewController: rootViewController)
     }
 }
