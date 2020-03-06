@@ -36,6 +36,21 @@ final class InitialCoordinatorTestCase: XCTestCase {
         }
     }
 
+    func test_tabBarController_hasToHaveAProperAppearence() {
+        XCTAssertFalse(tabBarController.tabBar.isTranslucent)
+        XCTAssertEqual(tabBarController.tabBar.barTintColor, ColorName.primary.color)
+        XCTAssertEqual(tabBarController.tabBar.tintColor, ColorName.secondary.color)
+    }
+
+    func test_navigationControllers_hasToHaveAProperAppearence() {
+        tabBarController.viewControllers!.forEach { viewController in
+            let navigationController = viewController as! UINavigationController
+            XCTAssertFalse(navigationController.navigationBar.isTranslucent)
+            XCTAssertEqual(navigationController.navigationBar.barTintColor, ColorName.primary.color)
+            XCTAssertEqual(navigationController.navigationBar.tintColor, ColorName.secondary.color)
+        }
+    }
+
     func test_firstNavigationController_hasToContainAllMovies() {
         let navigationController = tabBarController.viewControllers![0] as! UINavigationController
         MVAssertInstance(navigationController.visibleViewController, isKindOf: AllMoviesViewController.self)
