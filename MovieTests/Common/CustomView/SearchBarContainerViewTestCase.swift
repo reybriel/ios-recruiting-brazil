@@ -22,9 +22,17 @@ final class SearchBarContainerViewTestCase: XCTestCase {
         sut = nil
     }
 
+    // MARK: - SUT
+
     func test_sut_hasToHaveASearchBar() {
         XCTAssertNotNil(searchBar)
     }
+
+    func test_sut_hasToHaveAContainerView() {
+        XCTAssertNotNil(containerView)
+    }
+
+    // MARK: - Search Bar
 
     func test_searchBar_hasToHaveAnEmptyBackgroundImage() {
         XCTAssertEqual(searchBar.backgroundImage, UIImage())
@@ -64,9 +72,7 @@ final class SearchBarContainerViewTestCase: XCTestCase {
         XCTAssertEqual(searchBar.frame.height, 56)
     }
 
-    func test_sut_hasToHaveAContainerView() {
-        XCTAssertNotNil(containerView)
-    }
+    // MARK: - Container View
 
     func test_containerView_hasToHaveATransparentBackground() {
         XCTAssertEqual(containerView.backgroundColor, .clear)
@@ -88,6 +94,8 @@ final class SearchBarContainerViewTestCase: XCTestCase {
         XCTAssertEqual(sut.center.x, containerViewCenter.x)
     }
 
+    // MARK: - setContainerView(_:)
+
     func test_setContainerView_hasToSetAViewAsTheContanerViewSubview() {
         sut.setContainerView(view)
         XCTAssertTrue(containerView.subviews.first === view)
@@ -104,5 +112,32 @@ final class SearchBarContainerViewTestCase: XCTestCase {
         sut.setContainerView(view)
         XCTAssertEqual(view.frame.origin, .zero)
         XCTAssertEqual(containerView.frame.size, view.frame.size)
+    }
+
+    // MARK: - becomeFirstResponder
+
+    func test_becomeFirstResponder_hasToMakeSearchBarFirstResponder() {
+        assertSearchBarIsNotFirstResponder()
+        sut.becomeFirstResponder()
+        XCTAssertTrue(searchBar.isFirstResponder)
+    }
+
+    private func assertSearchBarIsNotFirstResponder() {
+        sut.activate()
+        XCTAssertFalse(searchBar.isFirstResponder)
+    }
+
+    // MARK: - resignFirstResponder
+
+    func test_resignFirstResponder_hasToResignSearchBarOfBeingTheFirstResponder() {
+        assertSearchBarIsFirstResponder()
+        sut.resignFirstResponder()
+        XCTAssertFalse(searchBar.isFirstResponder)
+    }
+
+    private func assertSearchBarIsFirstResponder() {
+        sut.activate()
+        searchBar.becomeFirstResponder()
+        XCTAssertTrue(searchBar.isFirstResponder)
     }
 }

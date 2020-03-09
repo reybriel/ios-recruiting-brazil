@@ -1,10 +1,6 @@
-import RxCocoa
-import RxSwift
 import UIKit
 
 final class SearchBarContainerView: UIView {
-    private let disposeBag: DisposeBag = .init()
-
     private let searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.backgroundImage = UIImage()
@@ -43,6 +39,16 @@ final class SearchBarContainerView: UIView {
         setNeedsLayout()
         layoutIfNeeded()
     }
+
+    @discardableResult
+    override func becomeFirstResponder() -> Bool {
+        searchBar.becomeFirstResponder()
+    }
+
+    @discardableResult
+    override func resignFirstResponder() -> Bool {
+        searchBar.resignFirstResponder()
+    }
 }
 
 extension SearchBarContainerView: ViewCode {
@@ -66,13 +72,5 @@ extension SearchBarContainerView: ViewCode {
                 .centerX
                 .equalToSuperview()
         }
-    }
-
-    func setupExtraConfigurations() {
-        searchBar.rx.cancelButtonClicked
-            .subscribe(onNext: { [weak searchBar] in
-                searchBar?.resignFirstResponder()
-            })
-            .disposed(by: disposeBag)
     }
 }
