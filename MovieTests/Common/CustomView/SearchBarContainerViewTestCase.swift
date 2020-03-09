@@ -11,7 +11,7 @@ final class SearchBarContainerViewTestCase: XCTestCase {
     }
 
     private var containerView: UIView! {
-        sut.subview(withAccessibilityIdentifier: "searchBarContainerView")
+        sut.subview(withAccessibilityIdentifier: "containerView")
     }
 
     override func setUp() {

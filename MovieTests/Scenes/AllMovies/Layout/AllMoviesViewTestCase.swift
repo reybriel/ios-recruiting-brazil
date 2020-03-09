@@ -6,12 +6,12 @@ final class AllMoviesTestCase: XCTestCase {
     private var sut: AllMoviesView!
 
     private var searchBarContainerView: SearchBarContainerView! {
-        sut.subview(withAccessibilityIdentifier: "searchBarContainer")
+        sut.subview(withAccessibilityIdentifier: "searchBarContainerView")
     }
 
     private var collectionView: UICollectionView! {
         searchBarContainerView
-            .subview(withAccessibilityIdentifier: "searchBarContainerView")!
+            .subview(withAccessibilityIdentifier: "containerView")?
             .subview(withAccessibilityIdentifier: "moviesCollectionView")
     }
 

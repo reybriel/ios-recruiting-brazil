@@ -17,7 +17,7 @@ final class SearchBarContainerView: UIView {
 
     private let containerView: UIView = {
         let view = UIView()
-        view.accessibilityIdentifier = "searchBarContainerView"
+        view.accessibilityIdentifier = "containerView"
         view.backgroundColor = .clear
         return view
     }()

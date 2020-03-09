@@ -4,7 +4,7 @@ import UIKit
 final class AllMoviesView: UIView {
     private let searchBarContainerView: SearchBarContainerView = {
         let view = SearchBarContainerView()
-        view.accessibilityIdentifier = "searchBarContainer"
+        view.accessibilityIdentifier = "searchBarContainerView"
         return view
     }()
 
