@@ -6,3 +6,5 @@ command -v swiftformat >/dev/null || { brew install swiftformat; }
 command -v swiftlint >/dev/null || { brew install swiftlint; }
 # SwiftGen install
 command -v swiftgen >/dev/null || { brew install swiftgen; }
+# SwiftSecrets install
+command -v swiftsecrets >/dev/null || { cd scripts/SwiftSecrets; make install; cd ../..; }

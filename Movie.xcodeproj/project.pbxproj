@@ -43,6 +43,7 @@
 		169F2B2F240E948A00AD1315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 169F2B2D240E948A00AD1315 /* LaunchScreen.storyboard */; };
 		16B61D6924121FF4006E88FF /* UIView+ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B61D6824121FF4006E88FF /* UIView+ViewHelper.swift */; };
 		16B61D6E24122463006E88FF /* CoordinatorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B61D6D24122463006E88FF /* CoordinatorExtension.swift */; };
+		16D3873B2416DF13005A7AD0 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D3873A2416DF13005A7AD0 /* Secrets.swift */; };
 		16F0D750240E9D25009ACAE8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F0D74F240E9D25009ACAE8 /* RxSwift.framework */; };
 		16F0D754240E9D32009ACAE8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F0D753240E9D32009ACAE8 /* RxCocoa.framework */; };
 		16F0D75D240E9E42009ACAE8 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F0D75C240E9E42009ACAE8 /* RxRelay.framework */; };
@@ -99,6 +100,7 @@
 		169F2B3B240E948A00AD1315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16B61D6824121FF4006E88FF /* UIView+ViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ViewHelper.swift"; sourceTree = "<group>"; };
 		16B61D6D24122463006E88FF /* CoordinatorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorExtension.swift; sourceTree = "<group>"; };
+		16D3873A2416DF13005A7AD0 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		16F0D74F240E9D25009ACAE8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		16F0D753240E9D32009ACAE8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		16F0D757240E9D4A009ACAE8 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 		164A3318240FFBF400EF88C5 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				16D3873A2416DF13005A7AD0 /* Secrets.swift */,
 				164A33272410027900EF88C5 /* Colors.swift */,
 				164A3319240FFBF400EF88C5 /* Strings.swift */,
 				164A331A240FFBF400EF88C5 /* Assets.swift */,
@@ -564,6 +567,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				164A3302240FE8AD00EF88C5 /* Coordinator.swift in Sources */,
+				16D3873B2416DF13005A7AD0 /* Secrets.swift in Sources */,
 				164A33282410027900EF88C5 /* Colors.swift in Sources */,
 				164A331D240FFBF400EF88C5 /* Assets.swift in Sources */,
 				169F2B23240E948900AD1315 /* AppDelegate.swift in Sources */,

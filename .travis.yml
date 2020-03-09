@@ -7,13 +7,13 @@ cache:
   - Carthage/
 
 before_install:
-  - chmod +x scripts/root_setup.sh
-  - chmod +x scripts/setup.sh
+  - chmod +x scripts/complete_setup.sh
 
 install:
-  - sh scripts/root_setup.sh
-  - sh scripts/setup.sh
+  - sh scripts/complete_setup.sh
+
+before_script:
+  - chmod +x scripts/run_tests.sh
 
 script:
-  - bundle exec fastlane build
-  - bundle exec fastlane test
+  - sh scripts/run_tests.sh
