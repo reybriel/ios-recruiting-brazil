@@ -4,5 +4,5 @@ if [ ! -z "$ON_CI" ]; then
 fi
 
 # Dependencies
-carthage bootstrap --platform ios --cache-builds
+carthage bootstrap --platform iOS --cache-builds
 bundle install
